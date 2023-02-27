@@ -1,0 +1,8 @@
+---
+title: "Estadistica Aplicada con R - 2023"
+---
+
+Este es el sitio web del Curso de Estadistica aplicada con R - 2023
+
+
+

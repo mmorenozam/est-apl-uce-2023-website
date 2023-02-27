@@ -1,0 +1,10 @@
+---
+title: "Sesiones"
+editor: visual
+---
+
+Aqui encontraras las presentaciones de cada una de las sesiones
+
+[Sesion 1](https://mmorenozam.github.io/est-apl-uce-2023-sesion1/){target="_blank"}
+
+
