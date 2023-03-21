@@ -1,8 +1,37 @@
 ---
-title: "Estadistica Aplicada con R - 2023"
+title: "Estadistica Aplicada con R"
 ---
 
-Este es el sitio web del Curso de Estadistica aplicada con R - 2023
+**Página actualizada el 20.03.2023**
+
+Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
+
+## Anuncios
+
+**Asegúrate de registrar tu correo electrónico para ser invitado al canal de comunicación del curso en la plataforma Zulip en** [este enlace.](https://forms.gle/kdFPXgZZ9Kcz2hvB6){target="_blank"}
+
+
+## Pre-requisitos
+
+-   Recomendable haber cursado al menos el equivalente a un crédito Educativo de Educación Superior de un curso de Introducción a la Estadística, o conocimiento acerca de:
+
+    -   Probabilidad básica
+    
+    -   Medidas de tendencia central
+    
+    -   Medidas de dispersión
+    
+    -   Intervalos de confianza
+    
+    -   Pruebas de hipótesis
+    
+-   Tener una conexión estable a internet.
+
+## Recomendaciones
+
+
+
+
 
 
 

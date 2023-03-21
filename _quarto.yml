@@ -4,17 +4,42 @@ project:
 
 website:
   title: "Estadistica Aplicada con R"
+  image: icon.png
+  favicon: icon.png
+  open-graph: true
   navbar:
+    logo: icon.png
+    title: false
     left:
       - href: index.qmd
         text: Home
-      - presentaciones.qmd
+      - materiales.qmd
+      - text: Módulos
+        menu:
+          - text: "Módulo 1"
+            href: "https://mmorenozam.github.io/uce2023-modulo1/"
+            target: "_blank"
+          - text: "Módulo 2"
+            href: "https://mmorenozam.github.io/uce2023-modulo2/"
+            target: "_blank"
+          - text: "Módulo 3"
+            href: "https://mmorenozam.github.io/uce2023-modulo3/"
+            target: "_blank"
+          - text: "Módulo 4"
+            href: "https://mmorenozam.github.io/uce2023-modulo4/"
+            target: "_blank"
+          - text: "Módulo 5"
+            href: "https://mmorenozam.github.io/uce2023-modulo5/"
+            target: "_blank"
+      - acerca.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
     toc: true
+    toc-location: left
+    toc-title: Contenido
 
 
 
