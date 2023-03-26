@@ -1,4 +1,8 @@
 ---
-title: "Materiales"
+title: "Materiales y Recursos"
 editor: visual
 ---
+
+# Tablas
+
+Las tablas de datos complementarias que usaremos en el transcurso del curso están disponibles aquí

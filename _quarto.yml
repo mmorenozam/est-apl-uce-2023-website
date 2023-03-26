@@ -12,8 +12,9 @@ website:
     title: false
     left:
       - href: index.qmd
-        text: Home
+        text: Inicio
       - materiales.qmd
+      - trabajo.qmd
       - text: Módulos
         menu:
           - text: "Módulo 1"

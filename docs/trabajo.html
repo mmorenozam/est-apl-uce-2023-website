@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estadistica Aplicada con R - Trabajo final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Estadistica Aplicada con R - Trabajo final">
+<meta property="og:description" content="">
+<meta property="og:image" content="trabajo_files/figure-html/unnamed-chunk-3-1.png">
+<meta property="og:site-name" content="Estadistica Aplicada con R">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./icon.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./materiales.html" rel="" target="">
+ <span class="menu-text">Materiales y Recursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./trabajo.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Trabajo final</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-módulos" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Módulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-módulos">    
+        <li>
+    <a class="dropdown-item" href="https://mmorenozam.github.io/uce2023-modulo1/" rel="" target="_blank">
+ <span class="dropdown-text">Módulo 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://mmorenozam.github.io/uce2023-modulo2/" rel="" target="_blank">
+ <span class="dropdown-text">Módulo 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://mmorenozam.github.io/uce2023-modulo3/" rel="" target="_blank">
+ <span class="dropdown-text">Módulo 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://mmorenozam.github.io/uce2023-modulo4/" rel="" target="_blank">
+ <span class="dropdown-text">Módulo 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://mmorenozam.github.io/uce2023-modulo5/" rel="" target="_blank">
+ <span class="dropdown-text">Módulo 5</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./acerca.html" rel="" target="">
+ <span class="menu-text">Acerca del curso</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#opción-1-reporte-estadístico-de-datos-propios" id="toc-opción-1-reporte-estadístico-de-datos-propios" class="nav-link active" data-scroll-target="#opción-1-reporte-estadístico-de-datos-propios">Opción 1: Reporte estadístico de datos propios</a></li>
+  <li><a href="#opción-2-resolver-las-siguientes-preguntas" id="toc-opción-2-resolver-las-siguientes-preguntas" class="nav-link" data-scroll-target="#opción-2-resolver-las-siguientes-preguntas">Opción 2: Resolver las siguientes preguntas:</a>
+  <ul class="collapse">
+  <li><a href="#pregunta-1" id="toc-pregunta-1" class="nav-link" data-scroll-target="#pregunta-1">Pregunta 1</a></li>
+  <li><a href="#pregunta-2" id="toc-pregunta-2" class="nav-link" data-scroll-target="#pregunta-2">Pregunta 2</a></li>
+  <li><a href="#pregunta-3" id="toc-pregunta-3" class="nav-link" data-scroll-target="#pregunta-3">Pregunta 3</a></li>
+  <li><a href="#pregunta-4" id="toc-pregunta-4" class="nav-link" data-scroll-target="#pregunta-4">Pregunta 4</a></li>
+  <li><a href="#pregunta-5" id="toc-pregunta-5" class="nav-link" data-scroll-target="#pregunta-5">Pregunta 5</a></li>
+  <li><a href="#pregunta-6" id="toc-pregunta-6" class="nav-link" data-scroll-target="#pregunta-6">Pregunta 6</a></li>
+  <li><a href="#pregunta-7" id="toc-pregunta-7" class="nav-link" data-scroll-target="#pregunta-7">Pregunta 7</a></li>
+  <li><a href="#pregunta-8" id="toc-pregunta-8" class="nav-link" data-scroll-target="#pregunta-8">Pregunta 8</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Trabajo final</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Aquí encontrarás los lineamientos para las dos opciones que tienes para llevar a cabo el trabajo final de este curso. Independientemente de la opción que uses, el trabajo final deberá ser presentado en formato .pdf con un apéndice donde esté presente el código de R que usaste.</p>
+<section id="opción-1-reporte-estadístico-de-datos-propios" class="level1">
+<h1>Opción 1: Reporte estadístico de datos propios</h1>
+<p>Estructura básica del informe:</p>
+<ol type="1">
+<li><p>Título</p></li>
+<li><p>Resumen</p></li>
+</ol>
+<p>Breve resumen de tu investigación/estudio. Debe contener aspectos generales cómo (y no necesariamente en este orden o limitado a): problema, metodología usada para resolver el problema, resultados principales y conclusión corta.</p>
+<ol start="3" type="1">
+<li>Objetivos</li>
+</ol>
+<p>Puedes usar un objetivo general y tantos objetivos específicos creas necesario. Puedes guiarte en la o las hipótesis de tu estudio para redactar objetivos consecuentes y precisos.</p>
+<ol start="4" type="1">
+<li>Metodología</li>
+</ol>
+<p>Breve descripción del diseño experimental usado, la o las hipótesis del estudio, los análisis estadísticos realizados. No hace falta el describir en detalle cada una de las metodologías estadísticas usadas.</p>
+<ol start="5" type="1">
+<li>Resultados</li>
+</ol>
+<p>Resumen de los resultados obtenidos.</p>
+<ol start="6" type="1">
+<li><p>Conclusiones</p></li>
+<li><p>Bibliografía (no es obligatorio, a menos que creas que sea necesario mencionar a mayor detalle el problema a resolver)</p></li>
+</ol>
+<p>En caso de que optes por usar bibliografía, eres libre de usar cualquier estilo bibliográfico de tu agrado.</p>
+<ol start="8" type="1">
+<li>Anexos</li>
+</ol>
+<p>En esta sección debes adjuntar el <strong>código de R que usaste</strong> y el <strong>ánalisis exploratorio de tus datos</strong>.</p>
+</section>
+<section id="opción-2-resolver-las-siguientes-preguntas" class="level1">
+<h1>Opción 2: Resolver las siguientes preguntas:</h1>
+<section id="pregunta-1" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-1">Pregunta 1</h2>
+<p>Con la ayuda de R, describe en tus propias palabras la tabla de datos <code>mtcars</code> disponible con R base. Además, reporta:</p>
+<ul>
+<li><p>Los estadísticos descriptivos de esta tabla de datos</p></li>
+<li><p>La moda de las variables <code>wt</code>, <code>carb</code>, <code>gear</code> y <code>qsec</code> usando el método de valor más frecuente (<code>mfv</code>)</p></li>
+</ul>
+</section>
+<section id="pregunta-2" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-2">Pregunta 2</h2>
+<p>Usando la tabla de datos <code>airquality</code> de R base</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>airquality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Crea una tabla de frecuencias categorizando la variable Ozone mediante el método de Scott.</p>
+</section>
+<section id="pregunta-3" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-3">Pregunta 3</h2>
+<p>Los datos <code>nhtemp</code> de R base corresponden a las temperaturas anuales promedio de la localidad de New Haven entre 1912 y 1971. Estos datos están almacenados en forma de un vector con nombres.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(nhtemp)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>nhtemp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time Series:
+Start = 1912 
+End = 1971 
+Frequency = 1 
+ [1] 49.9 52.3 49.4 51.1 49.4 47.9 49.8 50.9 49.3 51.9 50.8 49.6 49.3 50.6 48.4
+[16] 50.7 50.9 50.6 51.5 52.8 51.8 51.1 49.8 50.2 50.4 51.6 51.8 50.9 48.8 51.7
+[31] 51.0 50.6 51.7 51.5 52.1 51.3 51.0 54.0 51.4 52.7 53.1 54.6 52.0 52.0 50.9
+[46] 52.6 50.2 52.6 51.6 51.9 50.5 50.9 51.7 51.4 51.7 50.8 51.9 51.8 51.9 53.0</code></pre>
+</div>
+</div>
+<p>En base a estos datos, trata de reproducir el siguiente gráfico de la manera más próxima que puedas</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="trabajo_files/figure-html/unnamed-chunk-3-1.png" class="quarto-discovered-preview-image img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>TIPS:</strong></p>
+<ul>
+<li><p><code>ggplot2</code> requiere una tabla de datos. Para crear una tabla de datos, puedes usar el comando <code>data.frame</code> y la función <code>seq</code> para generar los años entre 1912 y 1971.</p></li>
+<li><p>Para lograr líneas entrecortadas en la geometría <code>geom_line</code>, puedes hacerlo especificando el argumento <code>linetype = "dashed"</code> dentro de la misma.</p></li>
+</ul>
+</section>
+<section id="pregunta-4" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-4">Pregunta 4</h2>
+<p>Usando la tabla de datos iris de R base:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>iris</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Trata de reproducir el siguiente gráfico de la manera más aproximada que puedas</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="trabajo_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>TIP: Para lograr saltos de línea en las etiquetas de un gráfico, puedes usar el código “\n” en donde desees poner el salto en el texto de la etiqueta</strong></p>
+</section>
+<section id="pregunta-5" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-5">Pregunta 5</h2>
+<p>Genera el mapa de observaciones perdidas de la tabla de datos <code>airquality</code> y una matriz de gráficos de dispersión.</p>
+<ul>
+<li><p>¿Qué puedes concluir acerca de estos datos observando estos dos gráficos que haz generado?</p></li>
+<li><p>¿Qué variables dejarías de lado para la matriz de gráficos de dispersión y por qué?</p></li>
+</ul>
+</section>
+<section id="pregunta-6" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-6">Pregunta 6</h2>
+<p>Un cólega tuyo, al enterarse que has tomado este curso, recurre a ti para que le ayudes a planear un experimento. Esta persona está interesada en evaluar la ganancia de peso en tres variedades de pollos sometidos a dos regímenes de dieta más un control con la dieta usual. El lugar donde se va a llevar a cabo el experimento cuenta con hasta 30 jaulas individuales para mantener a los pollos separados y evitar que coman raciones de alimentos que no les corresponda.</p>
+<ol type="a">
+<li>¿Qué tipo de diseño experimental le recomendarías usar?</li>
+<li>¿Le recomendarías comprar más jaulas o con las que tiene son suficientes?</li>
+<li>¿Cómo se vería la hoja de registro de datos (field book) para este experimento?</li>
+</ol>
+</section>
+<section id="pregunta-7" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-7">Pregunta 7</h2>
+<p>Ahora que la voz se ha pasado de que eres un(a) duro(a) para diseñar experimentos, otra persona te contacta y te pide consejo sobre que podría hacer en su caso: el objetivo es evaluar la efectividad de un medio de cultivo experimental para propagar cacao <em>in vitro</em>. Debido a las limitaciones de capacidad en el laboratorio donde se ha hecho esta nueva formulación, se ha logrado llegar a un acuerdo entre 4 universidades que prestarán personal y espacio para llevar a cabo el experimento por separado pero de manera simultánea bajo el mismo protocolo. Los tratamientos son básicamente un control (el medio tradicional) y el experimental</p>
+<ol type="a">
+<li>¿Qué tipo de diseño experimental le recomendarías usar?</li>
+<li>¿Cómo se vería la hoja de registro de datos (field book) para este experimento?</li>
+</ol>
+</section>
+<section id="pregunta-8" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-8">Pregunta 8</h2>
+<p>Por cuestiones prácticas, a veces es imposible el llevar a cabo un procedimiento de laboratorio de acuerdo a los protocolos estándar disponibles para su realización. En este sentido, a continuación podrás encontrar en resumen, un problema con el que me encontré durante la realización de mi tesis de pregrado:</p>
+<p>El objetivo de mi investigación de pregrado fue el de medir la eficiencia de distintas cepas de cianobacterias en la reducción de demanda química de oxígeno (DQO), nitrógeno (N) y fósforo (P) en aguas residuales sintéticas. De acuerdo a los protocolos establecidos por la APHA, AWWA y WEF, para la medición de N y P se necesitan entre medio litro y un litro de aguas residuales. Debido a las limitaciones económicas y de espacio del laboratorio donde lleve a cabo mi tesis, dichas cantidades eran prácticamente imposibles de mantener. En su lugar, decidí modificar los métodos usando cantidades proporcionales de reactivos y muestras para lograr usar solamente 5 mL de agua residual por análisis. Esta práctica que es común en muchas ocasiones, necesita de un proceso de validación del método. Es decir, el demostrar estadísticamente que no existe diferencia entre los métodos estándar y los modificados. En el código de R que pongo a tu disposición a continuación, están las lecturas espectrofotométricas de N y P en valores bajos, medios y altos en los cuales la relación de las lecturas con el contenido de estos parámetros es lineal de acuerdo al método estándar:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>datos_n <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">concentracion =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"baja"</span>,<span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"media"</span>,<span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"alta"</span>,<span class="dv">4</span>)),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">modificado =</span> <span class="fu">c</span>(<span class="fl">0.109</span>, <span class="fl">0.109</span>, <span class="fl">0.099</span>, <span class="fl">0.093</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="fl">0.315</span>, <span class="fl">0.300</span>, <span class="fl">0.336</span>, <span class="fl">0.302</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="fl">0.445</span>, <span class="fl">0.450</span>, <span class="fl">0.434</span>, <span class="fl">0.433</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">estandar =</span> <span class="fu">c</span>(<span class="fl">0.100</span>, <span class="fl">0.092</span>, <span class="fl">0.098</span>, <span class="fl">0.102</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                   <span class="fl">0.290</span>, <span class="fl">0.314</span>, <span class="fl">0.307</span>, <span class="fl">0.322</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                   <span class="fl">0.425</span>, <span class="fl">0.242</span>, <span class="fl">0.430</span>, <span class="fl">0.438</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>datos_p <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">concentracion =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"baja"</span>,<span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"media"</span>,<span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"alta"</span>,<span class="dv">4</span>)),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                      <span class="at">modificado =</span> <span class="fu">c</span>(<span class="fl">0.112</span>, <span class="fl">0.122</span>, <span class="fl">0.116</span>, <span class="fl">0.114</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                                     <span class="fl">0.229</span>, <span class="fl">0.227</span>, <span class="fl">0.229</span>, <span class="fl">0.225</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>                                     <span class="fl">0.346</span>, <span class="fl">0.348</span>, <span class="fl">0.440</span>, <span class="fl">0.340</span>),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">estandar =</span> <span class="fu">c</span>(<span class="fl">0.118</span>, <span class="fl">0.102</span>, <span class="fl">0.110</span>, <span class="fl">0.114</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                                   <span class="fl">0.202</span>, <span class="fl">0.236</span>, <span class="fl">0.249</span>, <span class="fl">0.224</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                                   <span class="fl">0.352</span>, <span class="fl">0.307</span>, <span class="fl">0.336</span>, <span class="fl">0.346</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Usando las tablas anteriormente mencionadas, responde las siguientes preguntas:</p>
+<ol type="a">
+<li><p>¿Qué tipo de prueba estadística utilizarías?</p></li>
+<li><p>¿Cuáles son las hipótesis nula y alternativa teniendo en cuenta que se busca demostrar que no existe diferencia entre las medias de los métodos estándar y modificado?</p></li>
+<li><p>¿Son los datos normalmente distribuidos?</p></li>
+<li><p>¿Son las medias entre los dos métodos iguales?</p></li>
+</ol>
+<p><strong>TIP: Necesitas segmentar los datos por cada una de las concentraciones para determinar si las medias son iguales para cada una de ellas. Para ello puedes usar el comando <code>subset</code>:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datos_n_baja <span class="ot">&lt;-</span> <span class="fu">subset</span>(datos_n, concentracion <span class="sc">==</span> <span class="st">"baja"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
