@@ -3,6 +3,6 @@ title: "Materiales y Recursos"
 editor: visual
 ---
 
-# Tablas
+# Datos
 
 Las tablas de datos complementarias que usaremos en el transcurso del curso están disponibles aquí

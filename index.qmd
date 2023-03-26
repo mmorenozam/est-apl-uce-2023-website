@@ -125,7 +125,7 @@ Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 |                                                                     |       |                                                        |
 |                                                                     |       | 15. Más exploración                                    |
 +---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo 4: Principios de Estadística                                 | 8     | 1.  Muestras, poblaciones y muestreos                  |
+| Módulo 4: Principios de Estadística                                 | 9     | 1.  Muestras, poblaciones y muestreos                  |
 |                                                                     |       |                                                        |
 |                                                                     |       | 2.  Parámetros poblacionales y estadísticos muestrales |
 |                                                                     |       |                                                        |
