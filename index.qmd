@@ -42,7 +42,9 @@ Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 -   El canal primario de comunicación está en la plataforma [Zulip](https://educontstats.zulipchat.com){target="_blank"}. Una vez tenga todas sus direcciones de correo electrónico, enviaré una invitación para que cada uno de ustedes puede unirse.
 
-    -   **Evita enviarme preguntas vía correo electrónico**. Mi correo electrónico tiene como único propósito el que sea el canal por el cual puedan enviarme el trabajo final del curso.
+-   El correo electrónico **appl.stats.2023@proton.me** está disponible para el envío únicamente del trabajo final de curso.
+
+    -   **Evita enviarme preguntas vía correo electrónico**. No accederé constantemente a este correo sino hasta el final del curso.
 
     -   En Zulip he creado cuatro canales de comunicación:
 
