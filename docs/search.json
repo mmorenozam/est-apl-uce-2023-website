@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Estadistica Aplicada con R",
     "section": "",
-    "text": "Página actualizada el 03.04.2023\nEste es el sitio web para el curso de Estadística Aplicada con R, Abril-2023"
+    "text": "Página actualizada el 04.04.2023\nEste es el sitio web para el curso de Estadística Aplicada con R, Abril-2023"
   },
   {
     "objectID": "index.html#anuncios",
     "href": "index.html#anuncios",
     "title": "Estadistica Aplicada con R",
     "section": "Anuncios",
-    "text": "Anuncios\nAsegúrate de registrar tu correo electrónico para ser invitado al canal de comunicación del curso en la plataforma Zulip en este enlace."
+    "text": "Anuncios\n\nAclaración: durante la clase del primer módulo me confundí con respecto al último día del curso. El curso termina el Miércoles 12 de abril, y no el Martes “12 de abril”. Disculpas de antemano por esta confusión."
   },
   {
     "objectID": "index.html#pre-requisitos",
@@ -25,7 +25,7 @@
     "href": "index.html#recomendaciones",
     "title": "Estadistica Aplicada con R",
     "section": "Recomendaciones",
-    "text": "Recomendaciones\n\nDe ser posible, trata de seguir las clases con una pantalla extra (un monitor extra o desde una tablet) para que puedas llevar a cabo los ejercicios a la par en tu ordenador.\nPor favor, no interrumpas la clase pidiéndome que regrese a un ejercicio. Cada sesión es grabada, y podrás volver a resolver tus dudas en la resolución de ejercicios en ellas.\nLastimosamente, los recursos más bastos de información acerca de programación (no solamente en R), se encuentran en inglés. Consecuentemente, la mayor parte de referencias en los módulos están en ese idioma. Por favor, no te sientas desánimado por esta realidad.\nEn el transcurso de las clases daré espacios dedicados a responder tantas preguntas sean posibles en virtud del tiempo. En el caso de no avanzar a responder tus preguntas, es mejor que las dejes en el canal de Zulip, así podré responderte una vez terminada cada sesión.\nTe aliento a tratar de usar las metodologías aquí impartidas en tus propios datos. En la medida de lo posible, estaré dispuesto a responder preguntas relacionadas a tu investigación/estudio particular en Zulip siempre y cuando se enmarquen dentro de los contenidos del curso."
+    "text": "Recomendaciones\n\nDe ser posible, trata de seguir las clases con una pantalla extra (un monitor extra o desde una tablet) para que puedas llevar a cabo los ejercicios a la par en tu ordenador.\nPor favor, si tienes alguna duda/pregunta házmela saber tan pronto como puedas.\nEn el caso de no alcanzar a responder tus preguntas en clase, postealas en el canal de Zulip, así podré responderte una vez terminada cada sesión.\nLastimosamente, los recursos más bastos de información acerca de programación (no solamente en R), se encuentran en inglés. Consecuentemente, la mayor parte de referencias en los módulos están en ese idioma. Por favor, no te sientas desánimado por esta realidad.\nTe aliento a tratar de usar las metodologías aquí impartidas en tus propios datos. En la medida de lo posible, estaré dispuesto a responder preguntas relacionadas a tu investigación/estudio particular en Zulip siempre y cuando se enmarquen dentro de los contenidos del curso."
   },
   {
     "objectID": "index.html#canales-de-comunicación",
@@ -60,7 +60,7 @@
     "href": "materiales.html",
     "title": "Materiales y Recursos",
     "section": "",
-    "text": "Datos\nLas tablas de datos complementarias que usaremos en el transcurso del curso están disponibles aquí\n\n\nEjercicios resueltos\nSubiré aquí los ejercicios resueltos conforme vayamos avanzando en el curso.\n\n\nClases grabadas\nCompartiré aquí las grabaciones de las clases conforme vayamos avanzando en el curso.\n\n\nRecursos extras\nAñadiré aquí para después del feriado de semana santa los enlaces a materiales de apoyo y libros para su aprendizaje."
+    "text": "Las tablas de datos complementarias que usaremos en el transcurso del curso están disponibles aquí"
   },
   {
     "objectID": "trabajo.html",
@@ -124,5 +124,19 @@
     "title": "Trabajo final",
     "section": "Pregunta 8",
     "text": "Pregunta 8\nPor cuestiones prácticas, a veces es imposible el llevar a cabo un procedimiento de laboratorio de acuerdo a los protocolos estándar disponibles para su realización. En este sentido, a continuación podrás encontrar en resumen, un problema con el que me encontré durante la realización de mi tesis de pregrado:\nEl objetivo de mi investigación de pregrado fue el de medir la eficiencia de distintas cepas de cianobacterias en la reducción de demanda química de oxígeno (DQO), nitrógeno (N) y fósforo (P) en aguas residuales sintéticas. De acuerdo a los protocolos establecidos por la APHA, AWWA y WEF, para la medición de N y P se necesitan entre medio litro y un litro de aguas residuales. Debido a las limitaciones económicas y de espacio del laboratorio donde lleve a cabo mi tesis, dichas cantidades eran prácticamente imposibles de mantener. En su lugar, decidí modificar los métodos usando cantidades proporcionales de reactivos y muestras para lograr usar solamente 5 mL de agua residual por análisis. Esta práctica que es común en muchas ocasiones, necesita de un proceso de validación del método. Es decir, el demostrar estadísticamente que no existe diferencia entre los métodos estándar y los modificados. En el código de R que pongo a tu disposición a continuación, están las lecturas espectrofotométricas de N y P en valores bajos, medios y altos en los cuales la relación de las lecturas con el contenido de estos parámetros es lineal de acuerdo al método estándar:\n\ndatos_n &lt;- data.frame(concentracion = c(rep(\"baja\",4), rep(\"media\",4), rep(\"alta\",4)),\n                      modificado = c(0.109, 0.109, 0.099, 0.093,\n                                     0.315, 0.300, 0.336, 0.302,\n                                     0.445, 0.450, 0.434, 0.433),\n                      estandar = c(0.100, 0.092, 0.098, 0.102,\n                                   0.290, 0.314, 0.307, 0.322,\n                                   0.425, 0.242, 0.430, 0.438))\n\ndatos_p &lt;- data.frame(concentracion = c(rep(\"baja\",4), rep(\"media\",4), rep(\"alta\",4)),\n                      modificado = c(0.112, 0.122, 0.116, 0.114,\n                                     0.229, 0.227, 0.229, 0.225,\n                                     0.346, 0.348, 0.440, 0.340),\n                      estandar = c(0.118, 0.102, 0.110, 0.114,\n                                   0.202, 0.236, 0.249, 0.224,\n                                   0.352, 0.307, 0.336, 0.346))\n\nUsando las tablas anteriormente mencionadas, responde las siguientes preguntas:\n\n¿Qué tipo de prueba estadística utilizarías?\n¿Cuáles son las hipótesis nula y alternativa teniendo en cuenta que se busca demostrar que no existe diferencia entre las medias de los métodos estándar y modificado?\n¿Son los datos normalmente distribuidos?\n¿Son las medias entre los dos métodos iguales?\n\nTIP: Necesitas segmentar los datos por cada una de las concentraciones para determinar si las medias son iguales para cada una de ellas. Para ello puedes usar el comando subset:\n\ndatos_n_baja &lt;- subset(datos_n, concentracion == \"baja\")"
+  },
+  {
+    "objectID": "materiales.html#módulo-1",
+    "href": "materiales.html#módulo-1",
+    "title": "Materiales y Recursos",
+    "section": "Módulo 1",
+    "text": "Módulo 1"
+  },
+  {
+    "objectID": "materiales.html#módulo-1-1",
+    "href": "materiales.html#módulo-1-1",
+    "title": "Materiales y Recursos",
+    "section": "Módulo 1",
+    "text": "Módulo 1\n\n# Ejercicio 1.1\n\nx &lt;- c(\"Lunes\", \"Martes\", \"Miércoles\")\ny &lt;- c(F, T, F, T, T, T)\nz &lt;- c(2+3i, 1i, sqrt(2i))\n\nstr(x)\nstr(y)\nstr(z)\n\nstr(c(x, y))\nstr(c(z, y))\n\n\n# Ejercicio 1.2\n\ntabla &lt;- data.frame(variable1 = c(1, 2, 3, 4, 5),\n                    variable2 = c(\"A\", \"B\", \"C\", \"D\", \"E\"))\n\nvector_a &lt;- c(1, 2, 3)\n\nlista_a &lt;- list(lista1 = vector_a,\n                lista2 = tabla)\n\nlista_a[[2]][4, 2]\n\n\n# Ejercicio 1.3\n\nej11 &lt;- c(108.5, 75.3, 67.5, 93.6, 153.8, 113.9, NA, 133.8, 47.8, 71.1, NA)\n\nmean(ej11, na.rm = T)\nmedian(ej11, na.rm = T)\nmodeest::mlv(ej11, method = \"mfv\", na.rm = T) # el comando :: permite llamar rápidamente funciones específicas de una lib.\nquantile(ej11, na.rm = T)\nsd(ej11, na.rm = T)\nvar(ej11, na.rm = T)\n\n\n# Ejercicio 1.4\ndata(\"iris\")\nsummary(iris)\n\n## Ejercicio 1.5\nlibrary(palmerpenguins)\nlibrary(flextable)\n\ndata(penguins)\n\ntabla_frecuencia &lt;- fdt(penguins$bill_depth_mm, na.rm = T)\nft1 &lt;- flextable(tabla_frecuencia)\n\nsave_as_docx(\"Tabla 1\" = ft1,\n             path = \"elpath/quecorresponda/entu/ordenador/tabla.docx\")"
   }
 ]

@@ -37,7 +37,9 @@ En caso de que optes por usar bibliografía, eres libre de usar cualquier estilo
 
 En esta sección debes adjuntar el **código de R que usaste** y el **ánalisis exploratorio de tus datos**.
 
-# Opción 2: Resolver las siguientes preguntas: (todavía en desarrollo, plantearé los últimos ejercicios en los próximos días)
+# Opción 2: Resolver las siguientes preguntas: 
+
+**(todavía en desarrollo, plantearé los últimos ejercicios en los próximos días)**
 
 ## Pregunta 1
 
