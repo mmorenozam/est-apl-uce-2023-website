@@ -48,19 +48,20 @@ lista_a[[2]][4, 2]
 
 # Ejercicio 1.3
 
-ej11 <- c(108.5, 75.3, 67.5, 93.6, 153.8, 113.9, NA, 133.8, 47.8, 71.1, NA)
+ej13 <- c(108.5, 75.3, 67.5, 93.6, 153.8, 113.9, NA, 133.8, 47.8, 71.1, NA)
 
-mean(ej11, na.rm = T)
-median(ej11, na.rm = T)
-modeest::mlv(ej11, method = "mfv", na.rm = T) # el comando :: permite llamar rápidamente funciones específicas de una lib.
-quantile(ej11, na.rm = T)
-sd(ej11, na.rm = T)
-var(ej11, na.rm = T)
+mean(ej13, na.rm = T)
+median(ej13, na.rm = T)
+modeest::mlv(ej13, method = "mfv", na.rm = T) # el comando :: permite llamar rápidamente funciones específicas de una lib.
+quantile(ej13, na.rm = T)
+sd(ej13, na.rm = T)
+var(ej13, na.rm = T)
 
 
 # Ejercicio 1.4
 data("iris")
 summary(iris)
+
 
 # Ejercicio 1.5
 library(palmerpenguins)
@@ -74,6 +75,85 @@ ft1 <- flextable(tabla_frecuencia)
 save_as_docx("Tabla 1" = ft1,
              path = "elpath/quecorresponda/entu/ordenador/tabla.docx")
 ```
+
+## Módulo 2
+
+```{r echo=T, eval=F}
+# Ejercicio 2.1
+library(FielDHub)
+
+trt <- c("cepa_1",
+         "cepa_2",
+         "cepa_3",
+         "cepa_4",
+         "cepa_5",
+         "cepa_6")
+
+trt_lista <- data.frame(TREATMENT = trt, REP = 4)
+
+dca.ej21 <- CRD(t = NULL,
+                       reps = NULL,
+                       plotNumber = 101,
+                       seed = 1460,
+                       locationName = "Quito",
+                       data = trt_lista)
+dca.ej21$fieldBook
+plot(dca.ej21)
+
+# Ejercicio 2.2
+
+dbca.ej22 <- RCBD(t = NULL,
+                       reps = 3,                    
+                       l = 1,                  # número de locaciones
+                       plotNumber = 101,       
+                       locationNames = "Quito", 
+                       seed = 123,
+                       data = trt_lista)       
+
+dca.ej22$fieldBook
+plot(dca.ej22)
+
+# Ejercicio 2.3
+
+FACTORS <- rep(c("CEPA", "N", "P"), c(3, 3, 3))
+LEVELS <- c("A", "B", "C", "D", "N1", "N2", "N3", "P1", "P2", "P3")
+data_factorial <- data.frame(FACTOR = FACTORS, LEVEL = LEVELS)
+
+# DCA
+dfc.dca.ej23 <- full_factorial(setfactors = NULL,
+                                    reps = 3,
+                                    l = 1,
+                                    type = 1,
+                                    plotNumber = 101,
+                                    seed = 1460,
+                                    locationNames = "Quito",
+                                    data = data_factorial)
+dfc.dca.ej23$fieldBook
+plot(dfc.dca.ej23)
+
+# DBCA
+dfc.dbca.ej23 <- full_factorial(setfactors = NULL,
+                                    reps = 3,
+                                    l = 1,
+                                    type = 2,
+                                    plotNumber = 101,
+                                    seed = 1460,
+                                    locationNames = "Quito",
+                                    data = data_factorial)
+dfc.dbca.ej23$fieldBook
+plot(dfc.dbca.ej23)
+
+# Ejercicio 2.4
+
+setwd("elpath/detudirectorio/detrabajo/entucomputadora")
+library(openxlsx)
+
+write.xlsx(dca.ej21$fieldBook, file = "ej21.xlsx")
+write.xlsx(dca.ej22$fieldBook, file = "ej22.xlsx")
+write.xlsx(dfc.dca.ej23$$fieldBook, file = "ej23_dca.xlsx")
+write.xlsx(dfc.dbca.ej23$$fieldBook, file = "ej23_dbca.xlsx")
+```
+
 # Recursos extras
 
 Añadiré aquí para después del feriado de semana santa los enlaces a materiales de apoyo y libros para su aprendizaje.
