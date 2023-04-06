@@ -2,11 +2,15 @@
 title: "Estadistica Aplicada con R"
 ---
 
-**Página actualizada el 05.04.2023**
+**Página actualizada el 0.04.2023**
 
 Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 ## Anuncios
+
+-   He actualizado el enlace a las clases grabadas de acuerdo al último que compartimos el 05.04 en el chat de zoom. **Por favor checa nuevamente si tienes acceso al repositorio.**
+
+-   Los ejercicios resueltos del módulo 3 estarán subidos en el transcurso del feriado.
 
 -   [**Aclaración: durante la clase del primer módulo me confundí con respecto al último día del curso. El curso termina el Miércoles 12 de abril, y no el Martes "12 de abril". Disculpas de antemano por esta confusión.**]{style="color:red;"}
 

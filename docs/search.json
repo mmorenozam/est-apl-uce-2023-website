@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Estadistica Aplicada con R",
     "section": "",
-    "text": "Página actualizada el 05.04.2023\nEste es el sitio web para el curso de Estadística Aplicada con R, Abril-2023"
+    "text": "Página actualizada el 0.04.2023\nEste es el sitio web para el curso de Estadística Aplicada con R, Abril-2023"
   },
   {
     "objectID": "index.html#anuncios",
     "href": "index.html#anuncios",
     "title": "Estadistica Aplicada con R",
     "section": "Anuncios",
-    "text": "Anuncios\n\nAclaración: durante la clase del primer módulo me confundí con respecto al último día del curso. El curso termina el Miércoles 12 de abril, y no el Martes “12 de abril”. Disculpas de antemano por esta confusión."
+    "text": "Anuncios\n\nHe actualizado el enlace a las clases grabadas de acuerdo al último que compartimos el 05.04 en el chat de zoom. Por favor checa nuevamente si tienes acceso al repositorio.\nLos ejercicios resueltos del módulo 3 estarán subidos en el transcurso del feriado.\nAclaración: durante la clase del primer módulo me confundí con respecto al último día del curso. El curso termina el Miércoles 12 de abril, y no el Martes “12 de abril”. Disculpas de antemano por esta confusión."
   },
   {
     "objectID": "index.html#pre-requisitos",
@@ -130,7 +130,7 @@
     "href": "materiales.html#módulo-1",
     "title": "Materiales y Recursos",
     "section": "Módulo 1",
-    "text": "Módulo 1"
+    "text": "Módulo 1\n\n# Ejercicio 1.1\n\nx &lt;- c(\"Lunes\", \"Martes\", \"Miércoles\")\ny &lt;- c(F, T, F, T, T, T)\nz &lt;- c(2+3i, 1i, sqrt(2i))\n\nstr(x)\nstr(y)\nstr(z)\n\nstr(c(x, y))\nstr(c(z, y))\n\n\n# Ejercicio 1.2\n\ntabla &lt;- data.frame(variable1 = c(1, 2, 3, 4, 5),\n                    variable2 = c(\"A\", \"B\", \"C\", \"D\", \"E\"))\n\nvector_a &lt;- c(1, 2, 3)\n\nlista_a &lt;- list(lista1 = vector_a,\n                lista2 = tabla)\n\nlista_a[[2]][4, 2]\n\n\n# Ejercicio 1.3\n\nej13 &lt;- c(108.5, 75.3, 67.5, 93.6, 153.8, 113.9, NA, 133.8, 47.8, 71.1, NA)\n\nmean(ej13, na.rm = T)\nmedian(ej13, na.rm = T)\nmodeest::mlv(ej13, method = \"mfv\", na.rm = T) # el comando :: permite llamar rápidamente funciones específicas de una lib.\nquantile(ej13, na.rm = T)\nsd(ej13, na.rm = T)\nvar(ej13, na.rm = T)\n\n\n# Ejercicio 1.4\ndata(\"iris\")\nsummary(iris)\n\n\n# Ejercicio 1.5\nlibrary(palmerpenguins)\nlibrary(flextable)\n\ndata(penguins)\n\ntabla_frecuencia &lt;- fdt(penguins$bill_depth_mm, na.rm = T)\nft1 &lt;- flextable(tabla_frecuencia)\n\nsave_as_docx(\"Tabla 1\" = ft1,\n             path = \"elpath/quecorresponda/entu/ordenador/tabla.docx\")"
   },
   {
     "objectID": "materiales.html#módulo-1-1",
