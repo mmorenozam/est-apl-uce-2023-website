@@ -178,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#opción-1-reporte-estadístico-de-datos-propios" id="toc-opción-1-reporte-estadístico-de-datos-propios" class="nav-link active" data-scroll-target="#opción-1-reporte-estadístico-de-datos-propios">Opción 1: Reporte estadístico de datos propios</a></li>
-  <li><a href="#opción-2-resolver-las-siguientes-preguntas" id="toc-opción-2-resolver-las-siguientes-preguntas" class="nav-link" data-scroll-target="#opción-2-resolver-las-siguientes-preguntas">Opción 2: Resolver las siguientes preguntas:</a>
+  <li><a href="#opción-2-resolver-al-menos-8-de-las-siguientes-preguntas" id="toc-opción-2-resolver-al-menos-8-de-las-siguientes-preguntas" class="nav-link" data-scroll-target="#opción-2-resolver-al-menos-8-de-las-siguientes-preguntas">Opción 2: Resolver al menos 8 de las siguientes preguntas</a>
   <ul class="collapse">
   <li><a href="#pregunta-1" id="toc-pregunta-1" class="nav-link" data-scroll-target="#pregunta-1">Pregunta 1</a></li>
   <li><a href="#pregunta-2" id="toc-pregunta-2" class="nav-link" data-scroll-target="#pregunta-2">Pregunta 2</a></li>
@@ -188,6 +188,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#pregunta-6" id="toc-pregunta-6" class="nav-link" data-scroll-target="#pregunta-6">Pregunta 6</a></li>
   <li><a href="#pregunta-7" id="toc-pregunta-7" class="nav-link" data-scroll-target="#pregunta-7">Pregunta 7</a></li>
   <li><a href="#pregunta-8" id="toc-pregunta-8" class="nav-link" data-scroll-target="#pregunta-8">Pregunta 8</a></li>
+  <li><a href="#pregunta-9" id="toc-pregunta-9" class="nav-link" data-scroll-target="#pregunta-9">Pregunta 9</a></li>
+  <li><a href="#pregunta-10" id="toc-pregunta-10" class="nav-link" data-scroll-target="#pregunta-10">Pregunta 10</a></li>
+  <li><a href="#pregunta-11" id="toc-pregunta-11" class="nav-link" data-scroll-target="#pregunta-11">Pregunta 11</a></li>
+  <li><a href="#pregunta-12" id="toc-pregunta-12" class="nav-link" data-scroll-target="#pregunta-12">Pregunta 12</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -247,9 +251,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>En esta sección debes adjuntar el <strong>código de R que usaste</strong> y el <strong>ánalisis exploratorio de tus datos</strong>.</p>
 </section>
-<section id="opción-2-resolver-las-siguientes-preguntas" class="level1">
-<h1>Opción 2: Resolver las siguientes preguntas:</h1>
-<p><strong>(todavía en desarrollo, plantearé los últimos ejercicios en los próximos días)</strong></p>
+<section id="opción-2-resolver-al-menos-8-de-las-siguientes-preguntas" class="level1">
+<h1>Opción 2: Resolver al menos 8 de las siguientes preguntas</h1>
+<p><strong>Cada pregunta debe estar acompañada de una debida conclusión basada en los resultados que obtengas</strong></p>
 <section id="pregunta-1" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-1">Pregunta 1</h2>
 <p>Con la ayuda de R, describe en tus propias palabras la tabla de datos <code>mtcars</code> disponible con R base. Además, reporta:</p>
@@ -368,6 +372,124 @@ Frequency = 1
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datos_n_baja <span class="ot">&lt;-</span> <span class="fu">subset</span>(datos_n, concentracion <span class="sc">==</span> <span class="st">"baja"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="pregunta-9" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-9">Pregunta 9</h2>
+<p>Usando la tabla de datos disponible con R base <code>mtcars</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Lleva a cabo un ANOVA de una vía usando como factor la variable <code>am</code> teniendo como variable de respuesta la variable <code>mpg</code></p>
+<p>Para mayor información de esta tabla de datos utiliza el comando de ayuda <code>?mtcars</code>.</p>
+<p><strong>TIP: convierte a factor la variable <code>am</code> utilizando <code>mtcars$am &lt;- as.factor(mtcars$am)</code></strong></p>
+</section>
+<section id="pregunta-10" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-10">Pregunta 10</h2>
+<p>Realiza un ANOVA de dos vías usando como factores las variables <code>am</code> y <code>gear</code> teniendo como variable de respuesta la variable <code>mpg</code></p>
+<p><strong>TIP: convierte a factores las variables <code>am</code> y <code>gear</code> usando el comando <code>as.factor()</code></strong></p>
+</section>
+<section id="pregunta-11" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-11">Pregunta 11</h2>
+<p>Del censo de corrientes biológicas de Maryland, se han obtenido datos de la población de carpitas rinconeras (<em>Rhinichthys cataractae</em>) en varias corrientes de agua de ese estado. La descripción de esta tabla de datos es la siguiente:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><code>Stream</code>: nombre de la corriente de agua</p></li>
+<li><p><code>longnose</code>: número de carpitas/75 metros de corriente</p></li>
+<li><p><code>acerage</code>: área (acres) drenada por la corriente</p></li>
+<li><p><code>DO2</code>: oxígeno disuelto (mg/L)</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p><code>maxdepth</code>: profundidad máxima (cm)</p></li>
+<li><p><code>NO3</code>: concentración de nitrato (mg/L)</p></li>
+<li><p><code>SO4</code>: concentración de sulfato (mg/L)</p></li>
+<li><p><code>temp</code>: temperatura del agua</p></li>
+</ul>
+</div>
+</div>
+<p>Supongamos que estamos interesados en saber las características físico-químicas de las corrientes de agua para predecir el número de carpitas que encontraríamos en corrientes similares donde no se las ha contado, pero se tiene información de estas características.</p>
+<p>Lleva a cabo una <strong>regresión lineal múltiple</strong> para determinar que variables influyen en el número de carpitas.</p>
+<p>Los datos se encuentran en el siguiente cuadro de código. Copia, pega y ejecuta el mismo en tu sesión de R para tener la tabla de datos <code>carpitas</code> en tu sesión.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Input <span class="ot">=</span> (<span class="st">"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="st">Stream                   longnose  acerage  DO2   maxdepth  NO3   SO4     temp</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="st">BASIN_RUN                  13         2528    9.6  80        2.28  16.75   15.3</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">BEAR_BR                    12         3333    8.5  83        5.34   7.74   19.4</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">BEAR_CR                    54        19611    8.3  96        0.99  10.92   19.5</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">BEAVER_DAM_CR              19         3570    9.2  56        5.44  16.53   17</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="st">BEAVER_RUN                 37         1722    8.1  43        5.66   5.91   19.3</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="st">BENNETT_CR                  2          583    9.2  51        2.26   8.81   12.9</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_BR                     72         4790    9.4  91        4.1    5.65   16.7</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_ELK_CR                164        35971   10.2  81        3.2   17.53   13.8</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_PIPE_CR                18        25440    7.5  120       3.53   8.2    13.7</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="st">BLUE_LICK_RUN               1         2217    8.5  46        1.2   10.85   14.3</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="st">BROAD_RUN                  53         1971   11.9  56        3.25  11.12   22.2</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">BUFFALO_RUN                16        12620    8.3  37        0.61  18.87   16.8</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="st">BUSH_CR                    32        19046    8.3  120       2.93  11.31   18</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">CABIN_JOHN_CR              21         8612    8.2  103       1.57  16.09   15</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="st">CARROLL_BR                 23         3896   10.4  105       2.77  12.79   18.4</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="st">COLLIER_RUN                18         6298    8.6  42        0.26  17.63   18.2</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="st">CONOWINGO_CR              112        27350    8.5  65        6.95  14.94   24.1</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="st">DEAD_RUN                   25         4145    8.7  51        0.34  44.93   23</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="st">DEEP_RUN                    5         1175    7.7  57        1.3   21.68   21.8</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="st">DEER_CR                    26         8297    9.9  60        5.26  6.36    19.1</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="st">DORSEY_RUN                  8         7814    6.8  160       0.44  20.24   22.6</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="st">FALLS_RUN                  15         1745    9.4  48        2.19  10.27   14.3</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="st">FISHING_CR                 11         5046    7.6  109       0.73   7.1    19</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="st">FLINTSTONE_CR              11        18943    9.2  50        0.25  14.21   18.5</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="st">GREAT_SENECA_CR            87         8624    8.6  78        3.37   7.51   21.3</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="st">GREENE_BR                  33         2225    9.1  41        2.3    9.72   20.5</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="st">GUNPOWDER_FALLS            22        12659    9.7  65        3.3    5.98   18</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="st">HAINES_BR                  98         1967    8.6  50        7.71  26.44   16.8</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="st">HAWLINGS_R                  1         1172    8.3  73        2.62   4.64   20.5</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="st">HAY_MEADOW_BR               5          639    9.5  26        3.53   4.46   20.1</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="st">HERRINGTON_RUN              1         7056    6.4  60        0.25   9.82   24.5</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="st">HOLLANDS_BR                38         1934   10.5  85        2.34  11.44   12</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="st">ISRAEL_CR                  30         6260    9.5  133       2.41  13.77   21</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="st">LIBERTY_RES                12          424    8.3  62        3.49   5.82   20.2</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_ANTIETAM_CR         24         3488    9.3  44        2.11  13.37   24</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_BEAR_CR              6         3330    9.1  67        0.81   8.16   14.9</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_CONOCOCHEAGUE_CR    15         2227    6.8  54        0.33   7.6    24</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_DEER_CR             38         8115    9.6  110       3.4    9.22   20.5</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_FALLS               84         1600   10.2  56        3.54   5.69   19.5</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_GUNPOWDER_R          3        15305    9.7  85        2.6    6.96   17.5</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_HUNTING_CR          18         7121    9.5  58        0.51   7.41   16</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_PAINT_BR            63         5794    9.4  34        1.19  12.27   17.5</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="st">MAINSTEM_PATUXENT_R       239         8636    8.4  150       3.31   5.95   18.1</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="st">MEADOW_BR                 234         4803    8.5  93        5.01  10.98   24.3</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="st">MILL_CR                     6         1097    8.3  53        1.71  15.77   13.1</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="st">MORGAN_RUN                 76         9765    9.3  130       4.38   5.74   16.9</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="st">MUDDY_BR                   25         4266    8.9  68        2.05  12.77   17</span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="st">MUDLICK_RUN                 8         1507    7.4  51        0.84  16.3    21</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="st">NORTH_BR                   23         3836    8.3  121       1.32   7.36   18.5</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="st">NORTH_BR_CASSELMAN_R       16        17419    7.4  48        0.29   2.5    18</span></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="st">NORTHWEST_BR                6         8735    8.2  63        1.56  13.22   20.8</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="st">NORTHWEST_BR_ANACOSTIA_R  100        22550    8.4  107       1.41  14.45   23</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="st">OWENS_CR                   80         9961    8.6  79        1.02   9.07   21.8</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="st">PATAPSCO_R                 28         4706    8.9  61        4.06   9.9    19.7</span></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_BR                   48         4011    8.3  52        4.7    5.38   18.9</span></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_CR                   18         6949    9.3  100       4.57  17.84   18.6</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_RUN                  36        11405    9.2  70        2.17  10.17   23.6</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="st">PRETTYBOY_BR               19          904    9.8  39        6.81   9.2    19.2</span></span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="st">RED_RUN                    32         3332    8.4  73        2.09   5.5    17.7</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="st">ROCK_CR                     3          575    6.8  33        2.47   7.61   18</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="st">SAVAGE_R                  106        29708    7.7  73        0.63  12.28   21.4</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="st">SECOND_MINE_BR             62         2511   10.2  60        4.17  10.75   17.7</span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="st">SENECA_CR                  23        18422    9.9  45        1.58   8.37   20.1</span></span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_BR_CASSELMAN_R        2         6311    7.6  46        0.64  21.16   18.5</span></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_BR_PATAPSCO          26         1450    7.9  60        2.96   8.84   18.6</span></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_FORK_LINGANORE_CR    20         4106   10.0  96        2.62   5.45   15.4</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a><span class="st">TUSCARORA_CR               38        10274    9.3  90        5.45  24.76   15</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="st">WATTS_BR                   19          510    6.7  82        5.25  14.19   26.5</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>carpitas <span class="ot">=</span> <span class="fu">read.table</span>(<span class="fu">textConnection</span>(Input),<span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pregunta-12" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-12">Pregunta 12</h2>
+<p>Realiza modelos lineales generalizados usando regresiones Poisson y binomial negativa para el número de carpitas en la Pregunta 11. Evalúa los modelos, ¿cuál encontraste es el mejor?</p>
 
 
 </section>

@@ -152,7 +152,107 @@ write.xlsx(dfc.dca.ej23$$fieldBook, file = "ej23_dca.xlsx")
 write.xlsx(dfc.dbca.ej23$$fieldBook, file = "ej23_dbca.xlsx")
 ```
 
+## Módulo 3
+
+```{r echo=T, eval=F}
+# Ejercicio 3.1
+library(palmerpenguins)
+library(ggplot2)
+library(viridis)
+library(ggsci)
+
+data(penguins)
+ggplot(penguins,
+       aes(x = flipper_length_mm, y = body_mass_g, colour = species)) +
+  geom_point(alpha = 0.7,
+             size = 3) +
+  facet_wrap(~sex) +
+  scale_color_viridis(discrete = T, option = "A") # cambia aquí la opción A por las letras B, C, D, E, F, G, y H para ver las otras paletas
+
+ggplot(penguins,
+       aes(x = flipper_length_mm, y = body_mass_g, colour = species)) +
+  geom_point(alpha = 0.7,
+             size = 3) +
+  facet_wrap(~sex) +
+  scale_color_npg() # cambia aquí la terminación "npg" por aaas, nejm, simpsons, rickandmorty para ver otras paletas
+
+p1 <- ggplot(penguins,
+       aes(x = flipper_length_mm, y = body_mass_g, colour = species)) +
+  geom_point(alpha = 0.7,
+             size = 3) +
+  facet_wrap(~sex) +
+  scale_color_npg()
+
+# Para cambiar el estilo en general del grafico, con el objeto p1 generado, agrega el tema poniendo + "estilo". Algunos estilos de ggplot2: theme_bw(), theme_gray(), theme_dark(), theme_minimal(), theme_classic(). Ejemplo:
+
+p1 + theme_dark()
+
+
+# Ejercicio 3.2
+sub_penguins <- na.omit(penguins)
+ggplot(sub_penguins,
+       aes(y = body_mass_g, x = species, fill = species)) +
+  geom_boxplot(outlier.fill = "red",
+               outlier.shape = 23) +
+  facet_grid(~sex~island) + 
+  theme(legend.position = "none")
+
+
+# Ejercicio 3.3
+outliers <- boxplot(bill_depth_mm ~ species, data = penguins, plot = F)$out
+x <- penguins
+x <- x[-which(x$bill_depth_mm %in% outliers), ]
+boxplot(bill_depth_mm ~ species, data = x)
+
+
+# Ejercicio 3.4
+# no olvides especificar el directorio de trabajo con setwd()
+library(readxl)
+rot_berlin <- read_excel("rotXLS.xlsx")
+rot_berlin$week <- as.factor(rot_berlin$week)
+boxplot(rot_berlin$cases~rot_berlin$week) # realizamos el boxplot
+outs <- boxplot(rot_berlin$cases~rot_berlin$week)$out
+x <- rot_berlin
+x <- x[-which(x$cases %in% outs), ]
+boxplot(cases ~ week, data = x) # nota como extraer un set de outliers genera mas outliers
+
+# Ejercicio 3.5
+library(GGally)
+matriz <- rot_berlin[, c(2, 5:12)]
+ggpairs(matriz)
+
+# Ejercicio 3.6
+# Este es un ejemplo de cambiar una tabla de formato largo a ancho
+# para usar la funcion pivot_longer de tidyr, debemos usar una variable categorica sobre la cual ordenar
+# los valores del resto de columnas en una sola.
+# Podemos usar indistintamente la semana o la fecha
+library(tidyr)
+rot_berlin_pivot <- rot_berlin[, c(2, 3, 5:12)]
+rot_berlin_pivot <- rot_berlin_pivot %>% 
+  pivot_longer(!week,names_to = "variables", values_to = "valores")
+ggplot(rot_berlin_pivot, aes(x = valores)) +
+  geom_histogram()+
+  facet_grid(~variables, scales = "free")
+
+# Ejercicio 3.7
+# Guarda los varios de los graficos de los ejercicios anteriores en objetos y genera un grafico combinado con patchwork
+# Para exportar los graficos a png y pdf guarda tu arreglo de graficos en otro objeto y exportalos con la funcion
+# ggsave de ggplot2. Repite el proceso cambiando los argumentos width y height hasta obtener un grafico de tu agrado
+# un ejemplo de como se veria tu linea de codigo para exportar el grafico, asumiendo que guardaste el arreglo de patchwork
+# bajo el nombre: plot_final esta a continuacion:
+
+ggsave("plot.pdf", plot_final, width = 100, height = 200)
+```
 
 # Recursos extras
 
-Añadiré aquí para después del feriado de semana santa los enlaces a materiales de apoyo y libros para su aprendizaje.
+## Libros (gratis)
+
+[Learning Statistics with R](https://learningstatisticswithr.com/){target="_blank"} de Danielle Navarro: excelente libro para comenzar el viaje de aprendizaje de R. Explica conceptos estadísticos de una manera sencilla y evitando complicadas fórmulas tanto como puede.
+
+[Modern Statistics with R](https://modernstatisticswithr.com/){target="_blank"} de Måns Thulin: es un ebook que abarca a mayor profundidad aspectos de operaciones con bases de datos y modelos estadísticos más complejos que los que cubrimos en el curso.
+
+[RStudio para Estadística Descriptiva en Ciencias Sociales](https://bookdown.org/gboccardo/manual-ED-UCH/) de Giorgio Boccardo Bosoni y Felipe Ruiz Bruzzone: es un ebook que contiene buena información en español sobre R. Al menos en para lo que es la manipulación de objetos y estadísticos descriptivos.
+
+
+

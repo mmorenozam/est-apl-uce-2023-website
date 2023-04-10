@@ -2,11 +2,17 @@
 title: "Estadistica Aplicada con R"
 ---
 
-**Página actualizada el 0.04.2023**
+**Página actualizada el 10.04.2023**
 
 Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 ## Anuncios
+
+-   En vista de que la última sesión es más corta he cambiado un poco el contenido.
+
+-   Los ejercicios están finalizados. Lee detenidamente las instrucciones de la opción que vas a escoger para el trabajo final.
+
+-   Ya está actualizado el Módulo 4 y el Módulo 5 ya está disponible
 
 -   He actualizado el enlace a las clases grabadas de acuerdo al último que compartimos el 05.04 en el chat de zoom. **Por favor checa nuevamente si tienes acceso al repositorio.**
 
@@ -46,7 +52,7 @@ Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 -   El canal primario de comunicación está en la plataforma [Zulip](https://educontstats.zulipchat.com){target="_blank"}. Una vez tenga todas sus direcciones de correo electrónico, enviaré una invitación para que cada uno de ustedes puede unirse.
 
--   El correo electrónico **appl.stats.2023@proton.me** está disponible para el envío únicamente del trabajo final de curso.
+-   El correo electrónico **appl.stats.2023\@proton.me** está disponible para el envío únicamente del trabajo final de curso.
 
     -   **Evita enviarme preguntas vía correo electrónico**. No accederé constantemente a este correo sino hasta el final del curso.
 
@@ -64,121 +70,121 @@ Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 ## Contenidos del curso
 
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo                                                              | Horas | Contenido                                              |
-+=====================================================================+:=====:+========================================================+
-| Módulo 1: Generalidades e Introducción a R                          | 3     | 1.  Generalidades                                      |
-|                                                                     |       |                                                        |
-|                                                                     |       | 2.  Introducción a R                                   |
-|                                                                     |       |                                                        |
-|                                                                     |       | 3.  Instalación de R y RStudio                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 4.  Tipos de objetos en R                              |
-|                                                                     |       |                                                        |
-|                                                                     |       | 5.  Librerías de R                                     |
-|                                                                     |       |                                                        |
-|                                                                     |       | 6.  Importación de datos en R                          |
-|                                                                     |       |                                                        |
-|                                                                     |       | 7.  Operaciones estadísticas básicas                   |
-|                                                                     |       |                                                        |
-|                                                                     |       | 8.  Estadísticos descriptivos y tablas de frecuencia   |
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo 2: Principios básicos de Diseño de Experimentos              | 3     | 1.  Pasos en una investigación                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 2.  Tipos de estudios/investigación                    |
-|                                                                     |       |                                                        |
-|                                                                     |       | 3.  Pilares del diseño de experimentos (DDE)           |
-|                                                                     |       |                                                        |
-|                                                                     |       | 4.  Repeticiones                                       |
-|                                                                     |       |                                                        |
-|                                                                     |       | 5.  Tamaño de muestra                                  |
-|                                                                     |       |                                                        |
-|                                                                     |       | 6.  Diseño Completamente al Azar (DCA)                 |
-|                                                                     |       |                                                        |
-|                                                                     |       | 7.  Diseño en Bloques Completamente al Azar (DBCA)     |
-|                                                                     |       |                                                        |
-|                                                                     |       | 8.  Diseño Factorial Completo (DFA)                    |
-|                                                                     |       |                                                        |
-|                                                                     |       | 9.  Diseño Cuadrado Latino (DCL)                       |
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo 3: Análisis Exploratorio de Datos e Introducción a `ggplot2` | 3     | 1.  Introducción a `ggplot2`                           |
-|                                                                     |       |                                                        |
-|                                                                     |       | 2.  Función de mapeo                                   |
-|                                                                     |       |                                                        |
-|                                                                     |       | 3.  Geometrías                                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 4.  Escalas                                            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 5.  Paletas de color                                   |
-|                                                                     |       |                                                        |
-|                                                                     |       | 6.  Gráficos de facetas                                |
-|                                                                     |       |                                                        |
-|                                                                     |       | 7.  Etiquetas y estilos                                |
-|                                                                     |       |                                                        |
-|                                                                     |       | 8.  Gráficos como objetos                              |
-|                                                                     |       |                                                        |
-|                                                                     |       | 9.  Principios de Análisis Exploratorio de Datos (AED) |
-|                                                                     |       |                                                        |
-|                                                                     |       | 10. Datos perdidos                                     |
-|                                                                     |       |                                                        |
-|                                                                     |       | 11. Observaciones anormales (outliers)                 |
-|                                                                     |       |                                                        |
-|                                                                     |       | 12. Gráficos de caja y bigote                          |
-|                                                                     |       |                                                        |
-|                                                                     |       | 13. Relaciones lineales (matrices de dispersión)       |
-|                                                                     |       |                                                        |
-|                                                                     |       | 14. Histogramas                                        |
-|                                                                     |       |                                                        |
-|                                                                     |       | 15. Más exploración                                    |
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo 4: Herramientas Estadísticas                                 | 9     | 1.  Muestras, poblaciones y muestreos                  |
-|                                                                     |       |                                                        |
-|                                                                     |       | 2.  Parámetros poblacionales y estadísticos muestrales |
-|                                                                     |       |                                                        |
-|                                                                     |       | 3.  Ley de los números grandes                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 4.  Distribución de muestro                            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 5.  Teorema del límite central                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 6.  Estimación de parámetros de población              |
-|                                                                     |       |                                                        |
-|                                                                     |       | 7.  Intervalos de confianza                            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 8.  Pruebas de hipótesis                               |
-|                                                                     |       |                                                        |
-|                                                                     |       | 9.  Tipos de errores                                   |
-|                                                                     |       |                                                        |
-|                                                                     |       | 10. Poder de una prueba estadística                    |
-|                                                                     |       |                                                        |
-|                                                                     |       | 11. Tamaño del efecto                                  |
-|                                                                     |       |                                                        |
-|                                                                     |       | 12. Pruebas de una y dos colas                         |
-|                                                                     |       |                                                        |
-|                                                                     |       | 13. Valores críticos y el valor p                      |
-|                                                                     |       |                                                        |
-|                                                                     |       | 14. Pruebas estadísticas paramétricas                  |
-|                                                                     |       |                                                        |
-|                                                                     |       | 15. Normalidad de una muestra                          |
-|                                                                     |       |                                                        |
-|                                                                     |       | 16. Homogeneidad de las varianzas                      |
-|                                                                     |       |                                                        |
-|                                                                     |       | 17. Pruebas estadísticas no paramétricas               |
-|                                                                     |       |                                                        |
-|                                                                     |       | 18. Tablas de contingencia                             |
-|                                                                     |       |                                                        |
-|                                                                     |       | 19. Análisis de Varianza (ANOVA) de una vía            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 20. ANOVA de múltiples vías                            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 21. Comparaciones múltiples                            |
-|                                                                     |       |                                                        |
-|                                                                     |       | 22. Regresión lineal                                   |
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
-| Módulo 5: Otros métodos estadísticos                                | 2     | 1.  Introducción a modelos lineales generalizados      |
-|                                                                     |       |                                                        |
-|                                                                     |       | 2.  Análisis de componentes principales                |
-+---------------------------------------------------------------------+-------+--------------------------------------------------------+
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
+| Módulo                                                              | Horas      | Contenido                                              |
++=====================================================================+:==========:+========================================================+
+| Módulo 1: Generalidades e Introducción a R                          | 3          | 1.  Generalidades                                      |
+|                                                                     |            |                                                        |
+|                                                                     |            | 2.  Introducción a R                                   |
+|                                                                     |            |                                                        |
+|                                                                     |            | 3.  Instalación de R y RStudio                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 4.  Tipos de objetos en R                              |
+|                                                                     |            |                                                        |
+|                                                                     |            | 5.  Librerías de R                                     |
+|                                                                     |            |                                                        |
+|                                                                     |            | 6.  Importación de datos en R                          |
+|                                                                     |            |                                                        |
+|                                                                     |            | 7.  Operaciones estadísticas básicas                   |
+|                                                                     |            |                                                        |
+|                                                                     |            | 8.  Estadísticos descriptivos y tablas de frecuencia   |
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
+| Módulo 2: Principios básicos de Diseño de Experimentos              | 3          | 1.  Pasos en una investigación                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 2.  Tipos de estudios/investigación                    |
+|                                                                     |            |                                                        |
+|                                                                     |            | 3.  Pilares del diseño de experimentos (DDE)           |
+|                                                                     |            |                                                        |
+|                                                                     |            | 4.  Repeticiones                                       |
+|                                                                     |            |                                                        |
+|                                                                     |            | 5.  Tamaño de muestra                                  |
+|                                                                     |            |                                                        |
+|                                                                     |            | 6.  Diseño Completamente al Azar (DCA)                 |
+|                                                                     |            |                                                        |
+|                                                                     |            | 7.  Diseño en Bloques Completamente al Azar (DBCA)     |
+|                                                                     |            |                                                        |
+|                                                                     |            | 8.  Diseño Factorial Completo (DFA)                    |
+|                                                                     |            |                                                        |
+|                                                                     |            | 9.  Diseño Cuadrado Latino (DCL)                       |
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
+| Módulo 3: Análisis Exploratorio de Datos e Introducción a `ggplot2` | 3          | 1.  Introducción a `ggplot2`                           |
+|                                                                     |            |                                                        |
+|                                                                     |            | 2.  Función de mapeo                                   |
+|                                                                     |            |                                                        |
+|                                                                     |            | 3.  Geometrías                                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 4.  Escalas                                            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 5.  Paletas de color                                   |
+|                                                                     |            |                                                        |
+|                                                                     |            | 6.  Gráficos de facetas                                |
+|                                                                     |            |                                                        |
+|                                                                     |            | 7.  Etiquetas y estilos                                |
+|                                                                     |            |                                                        |
+|                                                                     |            | 8.  Gráficos como objetos                              |
+|                                                                     |            |                                                        |
+|                                                                     |            | 9.  Principios de Análisis Exploratorio de Datos (AED) |
+|                                                                     |            |                                                        |
+|                                                                     |            | 10. Datos perdidos                                     |
+|                                                                     |            |                                                        |
+|                                                                     |            | 11. Observaciones anormales (outliers)                 |
+|                                                                     |            |                                                        |
+|                                                                     |            | 12. Gráficos de caja y bigote                          |
+|                                                                     |            |                                                        |
+|                                                                     |            | 13. Relaciones lineales (matrices de dispersión)       |
+|                                                                     |            |                                                        |
+|                                                                     |            | 14. Histogramas                                        |
+|                                                                     |            |                                                        |
+|                                                                     |            | 15. Más exploración                                    |
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
+| Módulo 4: Herramientas Estadísticas                                 | 9          | 1.  Muestras, poblaciones y muestreos                  |
+|                                                                     |            |                                                        |
+|                                                                     |            | 2.  Parámetros poblacionales y estadísticos muestrales |
+|                                                                     |            |                                                        |
+|                                                                     |            | 3.  Ley de los números grandes                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 4.  Distribución de muestro                            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 5.  Teorema del límite central                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 6.  Estimación de parámetros de población              |
+|                                                                     |            |                                                        |
+|                                                                     |            | 7.  Intervalos de confianza                            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 8.  Pruebas de hipótesis                               |
+|                                                                     |            |                                                        |
+|                                                                     |            | 9.  Tipos de errores                                   |
+|                                                                     |            |                                                        |
+|                                                                     |            | 10. Poder de una prueba estadística                    |
+|                                                                     |            |                                                        |
+|                                                                     |            | 11. Tamaño del efecto                                  |
+|                                                                     |            |                                                        |
+|                                                                     |            | 12. Pruebas de una y dos colas                         |
+|                                                                     |            |                                                        |
+|                                                                     |            | 13. Valores críticos y el valor p                      |
+|                                                                     |            |                                                        |
+|                                                                     |            | 14. Pruebas estadísticas paramétricas                  |
+|                                                                     |            |                                                        |
+|                                                                     |            | 15. Normalidad de una muestra                          |
+|                                                                     |            |                                                        |
+|                                                                     |            | 16. Homogeneidad de las varianzas                      |
+|                                                                     |            |                                                        |
+|                                                                     |            | 17. Pruebas estadísticas no paramétricas               |
+|                                                                     |            |                                                        |
+|                                                                     |            | 18. Tablas de contingencia                             |
+|                                                                     |            |                                                        |
+|                                                                     |            | 19. Análisis de Varianza (ANOVA) de una vía            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 20. ANOVA de múltiples vías                            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 21. Comparaciones múltiples                            |
+|                                                                     |            |                                                        |
+|                                                                     |            | 22. Regresión lineal                                   |
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
+| Módulo 5: Otros métodos estadísticos                                | 2          | 1.  Regresión lineal múltiple                          |
+|                                                                     |            |                                                        |
+|                                                                     |            | 2.  Introducción a modelos lineales generalizados      |
++---------------------------------------------------------------------+------------+--------------------------------------------------------+
 
 ## Código de Conducta
 
