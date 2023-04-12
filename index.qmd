@@ -2,11 +2,14 @@
 title: "Estadistica Aplicada con R"
 ---
 
-**Página actualizada el 10.04.2023**
+**Página actualizada el 12.04.2023**
 
 Este es el sitio web para el curso de Estadística Aplicada con R, Abril-2023
 
 ## Anuncios
+
+-   [**Por favor, te invito a que llenes el siguiente formulario sobre lo que opinas del curso, esto me ayudará muchísimo a mejorar para próximas oportunidades.**]{style="color:red;"} El enlace para el formulario [está aquí.](https://forms.gle/Lc3CKKPHWiCLEqTS9){target="_blank"}
+
 
 -   En vista de que la última sesión es más corta he cambiado un poco el contenido.
 
